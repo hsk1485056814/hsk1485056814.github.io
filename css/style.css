@@ -6829,6 +6829,8 @@ pre {
   order: 3;
   margin-top: 1rem;
   margin-bottom: 1.25rem;
+  margin-left: 0 !important;
+  width: 100% !important;
 }
 .post.post-v3 .meta-v3 {
   order: 4;
@@ -6855,11 +6857,37 @@ pre {
   color: #28c7bd;
 }
 .headimg-div .headimg-a {
-  background: #f6f6f6;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex !important;
+  justify-content: center;
+  -webkit-justify-content: center;
+  -khtml-justify-content: center;
+  -moz-justify-content: center;
+  -o-justify-content: center;
+  -ms-justify-content: center;
+  align-items: center;
+  height: auto !important;
+  min-height: 0;
+  overflow: visible;
+  background: transparent;
 }
 .headimg-div .headimg {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: block;
+  width: auto !important;
+  max-width: 100%;
+  height: auto !important;
+  max-height: 420px;
   object-fit: contain !important;
-  background: #f6f6f6;
+  background: transparent;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  margin: 0 auto;
 }
 .headimg-div .headimg:hover {
   transform: none;
@@ -6868,4 +6896,14 @@ pre {
   -moz-transform: none;
   -o-transform: none;
   -ms-transform: none;
+}
+@media screen and (max-width: 768px) {
+  .headimg-div .headimg {
+    max-height: 340px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .headimg-div .headimg {
+    max-height: 300px;
+  }
 }
