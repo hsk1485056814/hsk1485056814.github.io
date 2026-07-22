@@ -6805,6 +6805,7 @@ pre {
   left: 0px !important;
 }
 :root {
+  color-scheme: only dark;
   --hsk-bg: #071024;
   --hsk-panel: rgba(34,35,45,0.92);
   --hsk-panel-soft: rgba(44,45,56,0.84);
@@ -6816,6 +6817,7 @@ pre {
 }
 html {
   background: var(--hsk-bg);
+  color-scheme: only dark;
 }
 body {
   color: var(--hsk-text);
@@ -7420,6 +7422,33 @@ article.md,
 .md li {
   color: rgba(255,255,255,0.82);
 }
+article.md blockquote,
+#post-body blockquote,
+.md blockquote {
+  border-left: 4px solid var(--hsk-cyan) !important;
+  background-color: #151c2c !important;
+  background-image: none !important;
+  color: #f5f7fb !important;
+  -webkit-text-fill-color: #f5f7fb;
+  opacity: 1 !important;
+  -webkit-opacity: 1 !important;
+  -moz-opacity: 1 !important;
+}
+article.md blockquote p,
+article.md blockquote li,
+#post-body blockquote p,
+#post-body blockquote li,
+.md blockquote p,
+.md blockquote li {
+  color: #f5f7fb !important;
+  -webkit-text-fill-color: #f5f7fb;
+}
+article.md blockquote strong,
+#post-body blockquote strong,
+.md blockquote strong {
+  color: var(--hsk-accent) !important;
+  -webkit-text-fill-color: var(--hsk-accent);
+}
 article.article img,
 article.md img,
 #post-body img {
@@ -7514,10 +7543,10 @@ article.md img,
     display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
     display: grid;
     place-items: center;
-    border: 1px solid rgba(255,255,255,0.1);
+    border: 1px solid var(--hsk-border);
     border-radius: 50%;
     -webkit-border-radius: 50%;
-    background: rgba(255,255,255,0.07);
+    background: rgba(255,255,255,0.075);
   }
   .l_header .container {
     width: calc(100vw - 1.25rem) !important;
@@ -7525,10 +7554,10 @@ article.md img,
     margin-top: 0.65rem;
     padding: 0;
     height: 54px;
-    border: 1px solid rgba(255,255,255,0.1);
+    border: 1px solid var(--hsk-border);
     border-radius: 999px;
     -webkit-border-radius: 999px;
-    background: rgba(20,26,42,0.76);
+    background: rgba(255,255,255,0.075);
     backdrop-filter: blur(18px);
     box-shadow: 0 14px 36px rgba(0,0,0,0.26), inset 0 1px 0 rgba(255,255,255,0.05);
     -webkit-box-shadow: 0 14px 36px rgba(0,0,0,0.26), inset 0 1px 0 rgba(255,255,255,0.05);
@@ -7552,7 +7581,7 @@ article.md img,
     padding: 2rem 1.25rem 1.55rem;
     border-radius: 18px;
     -webkit-border-radius: 18px;
-    background: radial-gradient(circle at 24% 0%, rgba(69,217,232,0.14), transparent 15rem), linear-gradient(180deg, rgba(42,49,62,0.94), rgba(30,34,46,0.92));
+    background: radial-gradient(circle at 18% 30%, rgba(69,217,232,0.12), transparent 22rem), linear-gradient(180deg, rgba(45,46,58,0.92), rgba(35,36,46,0.88));
   }
   .cover-wrapper .cover-body .title {
     margin-bottom: 1rem;
@@ -7572,10 +7601,10 @@ article.md img,
     max-width: none;
     margin-bottom: 2rem;
     padding: 0;
-    border: 0;
-    background: transparent;
-    box-shadow: none;
-    -webkit-box-shadow: none;
+    border: 1px solid var(--hsk-border);
+    background: radial-gradient(circle at 20% 0%, rgba(255,255,255,0.06), transparent 32rem), linear-gradient(180deg, rgba(45,46,58,0.96), rgba(31,32,41,0.96));
+    box-shadow: 0 24px 90px rgba(0,0,0,0.42), inset 0 1px 0 rgba(255,255,255,0.04);
+    -webkit-box-shadow: 0 24px 90px rgba(0,0,0,0.42), inset 0 1px 0 rgba(255,255,255,0.04);
   }
   .post-list {
     gap: 1rem;
@@ -7583,7 +7612,7 @@ article.md img,
   .post.post-v3 {
     border-radius: 18px;
     -webkit-border-radius: 18px;
-    background: radial-gradient(circle at 20% 0%, rgba(69,217,232,0.08), transparent 14rem), rgba(34,39,55,0.92) !important;
+    background: radial-gradient(circle at 18% 0%, rgba(69,217,232,0.06), transparent 18rem), rgba(46,48,66,0.72) !important;
     box-shadow: 0 14px 38px rgba(0,0,0,0.28) !important;
     -webkit-box-shadow: 0 14px 38px rgba(0,0,0,0.28) !important;
   }
